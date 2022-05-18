@@ -1,20 +1,19 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit; 
+}
 
 html {
   font-size: 62.5%; 
 }
 
 body {
-  box-sizing: border-box; 
-}
-
-body {
   font-family: "Raleway-semibold" , sans-serif;
+  box-sizing: border-box; 
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
 }
+

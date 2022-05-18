@@ -1,77 +1,48 @@
 @import "./variables.module.scss";
-
-.nav{
-  position:fixed;
-  top:0;
-  z-index: 10;
-  height: 6rem;
-  width: 100%;
-  background:rgba(255, 255, 255, 0.06);
-  box-shadow: 0px 15px 30px #0000001a;
-  display:flex;
-  justify-content:space-between;
-
-  &__logo{
-    display: inline-block;
-    margin: auto 0 auto 2rem;
-    width: 8rem;
-    height: auto;
-    cursor: pointer;
-  }
-
-  &__list{
-    display:flex;
-    list-style: none;
-    height: 100%;
-  }
-
-  &__item{
-    display:block;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 0 .7rem;
-    &:not(:last-child){
-      margin-right: 1rem;
-    }
-
-    a {
-      &,&:visited{
-      text-decoration: none;
-      color: $color-white;
-      letter-spacing: .3rem;
-      font-weight: 400;
-      padding:.5rem 0;
-      font-size: 2rem;
-    transition: all 1s;
-    text-transform: uppercase;
-      }
-      &:active, &:focus , &.active{
-        color: $color-name-text;
-      }
-      &:hover{
-        border-top: 3px solid orange;
-      }
-    }
-
-  }
-}
+@import "./animation";
 
 .main{
   background: $color-header-bg;
   height: 100vh;
   position: relative;
 
-  h1{
+  &__container{
+    height:100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    text-align: center;
+    height:fit-content;
     transform: translate(-50%, -50%);
+  }
+  
+  .text__heading{
+    text-align: center;
     color:$color-white;
     font-family: "Raleway", sans-serif;
-
+    line-height: 3.5rem;
+    letter-spacing:.3rem;
+    animation: moveInLeft 1s ease-out;
+  
     span{
       color:$color-name-text;
     }
+  }
+  .text__subheading{
+    text-align: center;
+    color:$color-white;
+    font-family: "Raleway", sans-serif;
+    line-height: 3.5rem;
+    letter-spacing:.3rem;
+    animation: moveInRight 1s ease-out;
+  
+    span{
+      color:$color-name-text;
+    }
+  }
+  .button__container {
+    margin: 0 auto;
+    width: fit-content;
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
   }
 }
